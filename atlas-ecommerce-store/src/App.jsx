@@ -1,4 +1,9 @@
+import {
+  About
+} from './pages';
+
+
 const App = () => {
-  return <h1 className='text-7xl font-bold underline'>Tailwind project</h1>;
+  return <h1 className='text-3xl font-bold underline'>Tailwind project</h1>;
 };
 export default App;
