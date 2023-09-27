@@ -25,10 +25,13 @@ export const ProductsProvider = ({ children }) => {
   const openSidebar = () => {
     dispatch({ type: 'SIDEBAR_OPEN' });
   };
-  useEffect(() => {
-    openSidebar();
-  }, []);
-  return <ProductsContext.Provider value="products context">{children}</ProductsContext.Provider>;
+  const closeSidebar = () => {
+    dispatch({ type: 'SIDEBAR_CLOSE' });
+  };
+
+  return (
+    <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>{children}</ProductsContext.Provider>
+  );
 };
 // make sure use
 export const useProductsContext = () => {
