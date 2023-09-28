@@ -4,8 +4,8 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
-      <Services />
       <FeaturedProducts />
+      <Services />
       <Contact />
     </main>
   );
